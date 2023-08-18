@@ -1,0 +1,45 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: burlywood;
+  gap:10px
+}
+.otp-field{
+  height: 45px;
+  width: 42px;
+  border-radius: 7px;
+  outline: none;
+  text-align: center;
+  /* border: 1px solid blue;
+  box-shadow: inset 1rem 5rem #fff; */
+}
+
+/* .numberBlock{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.numberBlock .opt_num{
+  height: 45px;
+  width: 42px;
+  border-radius: 7px;
+  outline: none;
+  text-align: center;
+  border: 1px solid blue;
+  box-shadow: inset 1rem 5rem #fff;
+} */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
