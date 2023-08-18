@@ -1,0 +1,12 @@
+/* .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active{
+    color: red;
+  }
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed{
+    color: yellow;
+  } */
+  /* .css-117w1su-MuiStepIcon-text{
+    font-size: 3rem;
+  } */
+ #MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  background-color: yellow;
+ } 

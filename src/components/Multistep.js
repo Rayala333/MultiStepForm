@@ -5,6 +5,7 @@ import Thred from './Thred';
 import Fourth from './Fourth';
 import Dashbord from './Dashbord';
 import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
 
 
 import {Box,Stepper,Step,StepLabel }from '@mui/material';
@@ -24,6 +25,34 @@ const steps = [
   ];
 
   const stepStyle = {
+    '& .Mui-active':{
+        '&.MuiStepIcon-root':{
+            color:'orange',
+            fontsize:'2rem'
+        },
+        '& .MuiStepConnector-line':{
+            borderColor:'orange',
+            // fontsize:'5rem'
+        }
+    },
+    '& .Mui-completed':{
+        '&.MuiStepIcon-root':{
+            color:'yellow',
+            fontsize:'2rem'
+        },
+        '& .MuiStepConnector-line':{
+            borderColor:'yellow',
+            // fontsize:'5rem'
+        }
+    }
+
+    // MuiStepIcon-root.Mui-active
+
+    // '& .MuiStepIcon-root':{
+    //     '& .Mui-active':{
+    //         color:'waring.main'
+    //     }
+    // }
    
   }
 
@@ -58,7 +87,7 @@ const Multistep = () => {
   return (
     <store.Provider value={{data,changeHandler,SubmitHandler}} >
         <Box sx={{ width: '100%' }}>
-            <Stepper activeStep={step} alternativeLabel sx={stepStyle}>
+        <Stepper activeStep={step} alternativeLabel={true} sx={stepStyle}>
                 {steps.map((label) => (
                 <Step key={label} >
                     <StepLabel sx={{color:'yellow'}}>{label}</StepLabel>
@@ -75,8 +104,8 @@ const Multistep = () => {
             {step===4 && <Dashbord/>}
         </form>
     
-        {step > 0 && step<3 && <button className="btn btn-secondary" onClick={prevStep}>Previous</button>}
-        {step < 3 && <button className="btn btn-primary" onClick={nextStep}>Next</button>}
+        {step > 0 && step<3 && <Button variant="primary" onClick={prevStep}>Previous</Button>}
+        {step < 3 && <Button variant="primary" onClick={nextStep}>Next</Button>}
         {/* {step === 3 && <input type='submit' value='submit' /> } */}
         
         

@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { store } from './Multistep';
+import Button from 'react-bootstrap/Button';
+
 
 const Fourth = () => {
     const {data,changeHandler,SubmitHandler} = useContext(store)
@@ -7,7 +9,7 @@ const Fourth = () => {
     <>
     Password:
     <input type='text' name='password' value={data.password} onChange={changeHandler} />
-    <input type='submit' value='submit' />
+    <Button as='input' variant="primary" type='submit' value='submit' />
     </>
   )
 }
