@@ -7,10 +7,11 @@ import Dashbord from './Dashbord';
 import { useState } from 'react';
 
 
-import Box from '@mui/material/Box';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
+import {Box,Stepper,Step,StepLabel }from '@mui/material';
+import { yellow } from '@mui/material/colors';
+// import Stepper from '@mui/material/Stepper';
+// import Step from '@mui/material/Step';
+// import StepLabel from '@mui/material/StepLabel';
 
 
 export const store = createContext()
@@ -21,6 +22,10 @@ const steps = [
     'Contact',
     'Password',
   ];
+
+  const stepStyle = {
+   
+  }
 
 const Multistep = () => {
     const [step,setStep]=useState(0)
@@ -53,10 +58,10 @@ const Multistep = () => {
   return (
     <store.Provider value={{data,changeHandler,SubmitHandler}} >
         <Box sx={{ width: '100%' }}>
-            <Stepper activeStep={step} alternativeLabel>
+            <Stepper activeStep={step} alternativeLabel sx={stepStyle}>
                 {steps.map((label) => (
-                <Step key={label}>
-                    <StepLabel sx={{color:"#fff"}}>{label}</StepLabel>
+                <Step key={label} >
+                    <StepLabel sx={{color:'yellow'}}>{label}</StepLabel>
                 </Step>
                 ))}
             </Stepper>
