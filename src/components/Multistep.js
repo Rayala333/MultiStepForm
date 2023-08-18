@@ -16,10 +16,10 @@ import StepLabel from '@mui/material/StepLabel';
 export const store = createContext()
 
 const steps = [
-    'Select master blaster campaign settings',
-    'Create an ad group',
-    'Create an ad',
-    'submit',
+    'UserName',
+    'Email',
+    'Contact',
+    'Password',
   ];
 
 const Multistep = () => {
