@@ -19,7 +19,7 @@ const steps = [
     'UserName',
     'Email',
     'Contact',
-    'password',
+    'Password',
   ];
 
 const Multistep = () => {
